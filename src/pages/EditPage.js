@@ -20,7 +20,7 @@ const EditPage = () => {
   const sendData = () => {
     axios({
       method: "patch",
-      baseURL: "http://localhost:3001",
+      baseURL: "https://backend-app-production-80cd.up.railway.app",
       url: `/modify-api/${location.state.data._id}`,
       data: inputHandler,
     })
@@ -28,7 +28,7 @@ const EditPage = () => {
         console.log(response);
         if (response.status === 200)
           toast.success("Successfully updated the data !");
-        window.location.replace("/data");
+        window.location.
       })
       .catch(function (error) {
         console.log(error);
