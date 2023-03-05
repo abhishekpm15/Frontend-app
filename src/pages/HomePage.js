@@ -27,7 +27,7 @@ const HomePage = () => {
           toast.success("Successfully inserted the data !");
           setTimeout(()=>{
             window.location.replace("/");
-          },2000)
+          },3000)
         }
       })
       .catch(function (error) {

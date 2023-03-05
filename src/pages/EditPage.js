@@ -28,7 +28,9 @@ const EditPage = () => {
         console.log(response);
         if (response.status === 200)
           toast.success("Successfully updated the data !");
-        window.location.replace("/data");
+          setTimeout(()=>{
+            window.location.replace("/data");
+          },3000)
       })
       .catch(function (error) {
         console.log(error);

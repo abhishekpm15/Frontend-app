@@ -28,8 +28,11 @@ const DataPage = () => {
       .delete(`https://backend-app-production-80cd.up.railway.app/delete-data/${id}`)
       .then((response) => {
         console.log(response.data);
+        if (response.status === 200)
           toast.error("Successfully deleted the data !");
-          window.location.replace("/data");
+          setTimeout(()=>{
+            window.location.replace("/data");
+          },3000)
       })
       .catch((error) => {
         console.log(error);
