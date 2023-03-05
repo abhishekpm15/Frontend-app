@@ -11,7 +11,7 @@ const DataPage = () => {
 
   const handleEdit = (index, id) => {
     axios
-      .get(`http://localhost:3001/get-data/${id}`)
+      .get(`https://backend-app-production-80cd.up.railway.app/get-data/${id}`)
       .then((response) => {
         console.log(response.data);
         const data = response.data;
