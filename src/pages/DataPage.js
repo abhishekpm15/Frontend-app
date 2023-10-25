@@ -11,7 +11,7 @@ const DataPage = () => {
 
   const handleEdit = (index, id) => {
     axios
-      .get(`https://backend-app-production-80cd.up.railway.app/get-data/${id}`)
+      .get(`https://backend-app-production-96e7.up.railway.app/get-data/${id}`)
       .then((response) => {
         console.log(response.data);
         const data = response.data;
@@ -25,14 +25,11 @@ const DataPage = () => {
   const handleDelete = (index, id) => {
     console.log(index);
     axios
-      .delete(`https://backend-app-production-80cd.up.railway.app/delete-data/${id}`)
+      .delete(`https://backend-app-production-96e7.up.railway.app/delete-data/${id}`)
       .then((response) => {
         console.log(response.data);
-        if (response.status === 200)
           toast.error("Successfully deleted the data !");
-          setTimeout(()=>{
-            window.location.replace("/data");
-          },3000)
+          window.location.replace("/data");
       })
       .catch((error) => {
         console.log(error);
@@ -40,7 +37,7 @@ const DataPage = () => {
   };
 
   const getData = () => {
-    axios.get("https://backend-app-production-80cd.up.railway.app/get-data").then((response) => {
+    axios.get("https://backend-app-production-96e7.up.railway.app/get-data").then((response) => {
       console.log(response.data);
       if(response.data.length === 0)
         toast.error("No data found !");
